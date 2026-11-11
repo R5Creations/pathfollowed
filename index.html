@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PathFollowed | Coming Soon</title>
+  <meta name="description" content="PathFollowed is coming soon.">
+  <link rel="icon" type="image/png" href="PathFollowed_P.png">
+  <link rel="apple-touch-icon" href="PathFollowed_P.png">
+
+  <!-- Social share preview -->
+  <meta property="og:title" content="PathFollowed">
+  <meta property="og:description" content="Coming soon.">
+  <meta property="og:image" content="PathFollowed_P.png">
+  <meta name="theme-color" content="#14110e">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #14110e;
+      --bg-glow: #2a2219;
+      --gold: #c4a174;
+      --gold-light: #d6c4ad;
+      --text-muted: #9b8f80;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { height: 100%; }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      background: radial-gradient(ellipse at center, var(--bg-glow) 0%, var(--bg) 70%);
+      background-color: var(--bg);
+      color: var(--gold-light);
+      font-family: "Montserrat", system-ui, sans-serif;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeUp 1.2s ease-out both;
+    }
+
+    .logo {
+      width: clamp(140px, 32vw, 220px);
+      height: auto;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.4rem, 7vw, 4rem);
+      letter-spacing: 0.04em;
+      background: linear-gradient(180deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .divider {
+      width: 64px;
+      height: 1px;
+      margin: 22px auto;
+      background: var(--gold);
+      opacity: 0.6;
+    }
+
+    .soon {
+      font-size: clamp(0.8rem, 2.4vw, 0.95rem);
+      font-weight: 500;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--gold);
+      /* letter-spacing adds trailing space; offset it so text stays centered */
+      margin-right: -0.45em;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      main { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="PathFollowed_P.png" alt="PathFollowed logo">
+    <h1>PathFollowed</h1>
+    <div class="divider" aria-hidden="true"></div>
+    <p class="soon">Coming Soon</p>
+  </main>
+
+  <footer>&copy; <span id="year">2026</span> PathFollowed</footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
